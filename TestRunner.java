@@ -7,7 +7,7 @@ public class TestRunner {
                 Test testAnnotation = method.getAnnotation(Test.class);
                 if (testAnnotation.enabled()) {
                     try {
-                        System.out.println("Running test: " + testAnnotation.name());
+                        System.out.println(testAnnotation.name());
                         method.invoke(testClass.getDeclaredConstructor().newInstance());
                     } catch (Exception e) {
                         e.printStackTrace();
